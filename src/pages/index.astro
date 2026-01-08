@@ -133,7 +133,21 @@ import Layout from '../layouts/Layout.astro';
   data-netlify="true"
   netlify-honeypot="bot-field"
 >
-  <input type="hidden" name="form-name" value="holiday-home-enquiry" />
+<input
+  type="text"
+  name="name"
+  required
+  style="
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.25rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fdfdfd;
+    color: #111;
+  "
+/>
+
   <p hidden>
     <label>Don’t fill this out: <input name="bot-field" /></label>
   </p>
