@@ -1,14 +1,12 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-// If your home page uses a Layout component, import it too, e.g.:
-// import Layout from '../layouts/Layout.astro';
 ---
 
-<!-- If you have a Layout component, wrap everything in it instead of using raw <main> -->
-<!-- <Layout title="Our Services - Bay of Islands Holiday Home Support"> -->
+<Layout title="Our Services - Bay of Islands Holiday Home Support">
   <Header />
 
-  <main class="max-w-6xl mx-auto px-4 py-12 bg-gray-50 text-gray-800">
+  <main class="max-w-6xl mx-auto px-4 py-12" style="line-height: 1.6;">
     <!-- Intro Section -->
     <section class="text-center mb-16">
       <h1 class="text-4xl font-bold mb-4">Our Services</h1>
@@ -34,7 +32,9 @@ import Header from '../components/Header.astro';
             <li>Coordination of urgent or routine issues</li>
             <li>Clear communication with owners</li>
           </ul>
-          <p class="italic">Ideal for owners who self-manage bookings but need reliable local help. No commission if no bookings.</p>
+          <p class="italic">
+            Ideal for owners who self-manage bookings but need reliable local help. No commission if no bookings.
+          </p>
         </div>
 
         <!-- Enhanced Package -->
@@ -64,7 +64,9 @@ import Header from '../components/Header.astro';
             <li>Priority 24/7 response</li>
             <li>Quarterly performance review</li>
           </ul>
-          <p class="italic">Ideal for overseas or multi-property owners. (Active marketing available as add-on.)</p>
+          <p class="italic">
+            Ideal for overseas or multi-property owners. (Active marketing available as add-on.)
+          </p>
         </div>
       </div>
     </section>
@@ -90,16 +92,26 @@ import Header from '../components/Header.astro';
             <li>Basic SEO and mobile optimization</li>
             <li>Training on how to manage your site</li>
           </ul>
-          <p class="italic">Boost direct bookings and reduce OTA fees while keeping everything centralized.</p>
+          <p class="italic">
+            Boost direct bookings and reduce OTA fees while keeping everything centralized.
+          </p>
         </div>
 
         <!-- Other Add-Ons -->
         <div class="bg-white p-6 rounded-lg shadow-md">
           <h3 class="text-2xl font-semibold mb-4">Other Add-Ons</h3>
           <ul class="list-disc list-inside space-y-4">
-            <li><strong>Full Listing Setup & Active Marketing:</strong> +3% commission – Get your property on Airbnb, Bookabach, Booking.com, etc., with optimized listings.</li>
-            <li><strong>Professional Photography:</strong> One-off $300–$500 – High-quality photos to make your listing stand out.</li>
-            <li><strong>Key Safe Installation or Initial Setup:</strong> $200 – Secure access for guests and cleaners.</li>
+            <li>
+              <strong>Full Listing Setup & Active Marketing:</strong> +3% commission – Get your property on Airbnb,
+              Bookabach, Booking.com, etc., with optimized listings.
+            </li>
+            <li>
+              <strong>Professional Photography:</strong> One-off $300–$500 – High-quality photos to make your listing
+              stand out.
+            </li>
+            <li>
+              <strong>Key Safe Installation or Initial Setup:</strong> $200 – Secure access for guests and cleaners.
+            </li>
           </ul>
         </div>
       </div>
@@ -109,15 +121,9 @@ import Header from '../components/Header.astro';
     <section class="text-center bg-blue-100 p-8 rounded-lg">
       <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
       <p class="text-lg mb-6">Contact us for a free property assessment and personalized quote.</p>
-      <a href="#enquire" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+      <a href="/#enquire" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
         Enquire Now
       </a>
     </section>
   </main>
-<!-- </Layout> -->
-Key points:
-
-Imports (import Header ...) go inside the --- block at the top. [Astro on Netlify]
-Don’t include <!doctype html>, <html>, <head>, <body> in a page if your project already has a layout handling that; follow the same pattern as index.astro.
-Keep Tailwind classes as-is; the Astro Platform Starter already wires Tailwind globally. [Astro Platform Starter]
-If you paste your src/pages/index.astro, I can align this exactly (for example, wrapping in the same Layout component and setting the page <title> the same way your home page does).
+</Layout>
