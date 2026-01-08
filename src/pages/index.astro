@@ -5,39 +5,104 @@ import Markdown from '../components/Markdown.astro';
 
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
 <Layout title="Bay of Islands Holiday Home Support">
 
-  <section style="max-width: 900px; margin: 0 auto; padding: 3rem 1rem;">
-    <h1>Holiday Home Support<br />Bay of Islands</h1>
+  <!-- HERO -->
+  <section style="max-width: 900px; margin: 0 auto; padding: 3.5rem 1rem;">
+    <h1>
+      Reliable Holiday Home Support<br />
+      in the Bay of Islands
+    </h1>
 
-    <p style="font-size: 1.2rem; margin-top: 1rem;">
-      Local oversight, changeover checks, and peace of mind for holiday home owners.
-      <br />
-      Not full property management. Limited client numbers.
+    <p style="font-size: 1.25rem; margin-top: 1.2rem; max-width: 720px;">
+      I provide local oversight, changeover checks, and practical on-the-ground support
+      for holiday home owners who can’t always be here themselves.
+    </p>
+
+    <p style="margin-top: 1rem; max-width: 720px;">
+      This is not full property management — it’s a calm, reliable layer of support
+      that helps prevent small issues becoming expensive or stressful ones.
     </p>
   </section>
 
-  <section style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+  <!-- WHO IT’S FOR -->
+  <section style="background:#f7f7f7; padding: 3rem 1rem;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2>Who this is for</h2>
+
+      <ul style="margin-top:1rem;">
+        <li>You own a holiday home in the Bay of Islands</li>
+        <li>You live elsewhere or aren’t always nearby</li>
+        <li>You want someone local keeping an eye on things</li>
+        <li>You value clear boundaries, communication, and reliability</li>
+      </ul>
+
+      <p style="margin-top:1rem;">
+        I work with a limited number of properties so I can be consistent, responsive,
+        and familiar with each home.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section style="max-width: 900px; margin: 0 auto; padding: 3rem 1rem;">
     <h2>Services</h2>
 
+    <p style="max-width: 720px;">
+      Services are structured as monthly plans with a set number of visits.
+      This keeps things fair, predictable, and avoids over- or under-servicing.
+    </p>
+
     <h3>Essential Oversight</h3>
-    <p>$280 per month · Up to 6 visits</p>
+    <p>
+      <strong>$280 per month</strong><br />
+      Up to 6 service visits per month for low-use homes.
+    </p>
 
     <h3>Active Hosting Support</h3>
-    <p>$420 per month · Up to 12 visits</p>
+    <p>
+      <strong>$420 per month</strong><br />
+      Up to 12 service visits per month for regularly booked properties.
+    </p>
 
     <h3>High-Turnover Care</h3>
-    <p>$650 per month · Up to 20 visits</p>
+    <p>
+      <strong>$650 per month</strong><br />
+      Up to 20 service visits per month for busy or premium homes.
+    </p>
 
-    <p style="margin-top: 1rem;">
-      Additional visits charged per use. Clear scope. No surprises.
+    <p style="margin-top:1rem;">
+      Additional visits are charged per use. Scope is clear and agreed upfront.
     </p>
   </section>
 
-  <section style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+  <!-- TRUST -->
+  <section style="background:#f7f7f7; padding: 3rem 1rem;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2>How I work</h2>
+
+      <ul>
+        <li>Scheduled service days — no constant interruptions</li>
+        <li>Clear communication and photo reporting</li>
+        <li>Issues flagged early, not after guests arrive</li>
+        <li>Professional boundaries (no scope creep)</li>
+      </ul>
+
+      <p style="margin-top:1rem;">
+        My role is to support your property — not to replace cleaners, trades,
+        or full management services.
+      </p>
+    </div>
+  </section>
+
+  <!-- ENQUIRY -->
+  <section style="max-width: 900px; margin: 0 auto; padding: 3rem 1rem;">
     <h2>Enquire</h2>
+
+    <p style="max-width: 720px;">
+      If you’re looking for a local, reliable point of contact for your holiday home,
+      you’re welcome to get in touch below.
+    </p>
 
     <form
       name="holiday-home-enquiry"
@@ -73,7 +138,7 @@ import Markdown from '../components/Markdown.astro';
 
       <p>
         <label>
-          Message<br />
+          Brief message<br />
           <textarea name="message" rows="4" required></textarea>
         </label>
       </p>
@@ -84,9 +149,4 @@ import Markdown from '../components/Markdown.astro';
     </form>
   </section>
 
-</Layout>
-
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
 </Layout>
