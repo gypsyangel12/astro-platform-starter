@@ -126,69 +126,90 @@ import Layout from '../layouts/Layout.astro';
       you’re welcome to get in touch below.
     </p>
 
-   <form
+  <form
   name="holiday-home-enquiry"
   method="POST"
-  action="/thanks/"
+  action="/thanks"
   data-netlify="true"
   netlify-honeypot="bot-field"
+  style="max-width: 720px;"
 >
-<input
-  type="text"
-  name="name"
-  required
-  style="
-    width: 100%;
-    padding: 0.6rem;
-    margin-top: 0.25rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    background: #fdfdfd;
-    color: #111;
-  "
-/>
-
+  <!-- Required for Netlify -->
+  <input type="hidden" name="form-name" value="holiday-home-enquiry" />
   <p hidden>
     <label>Don’t fill this out: <input name="bot-field" /></label>
   </p>
 
-  <p>
-    <label>
-      Name<br />
-      <input type="text" name="name" required />
-    </label>
+  <!-- Field styles -->
+  <style>
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.65rem;
+      margin-top: 0.35rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fdfdfd;
+      color: #111;
+      font-size: 1rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #4f7cff;
+      box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.25);
+      background: #ffffff;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 0.9rem 1.4rem;
+      border-radius: 10px;
+      border: 0;
+      font-weight: 700;
+      background: #4f7cff;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #3f69e6;
+    }
+  </style>
+
+  <label>
+    Name
+    <input type="text" name="name" required />
+  </label>
+
+  <label>
+    Email
+    <input type="email" name="email" required />
+  </label>
+
+  <label>
+    Property location
+    <input type="text" name="location" />
+  </label>
+
+  <label>
+    Brief message
+    <textarea name="message" rows="4" required></textarea>
+  </label>
+
+  <p style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 1.5rem;">
+    Your details are only used to respond to your enquiry.
   </p>
 
-  <p>
-    <label>
-      Email<br />
-      <input type="email" name="email" required />
-    </label>
-  </p>
-
-  <p>
-    <label>
-      Property location<br />
-      <input type="text" name="location" />
-    </label>
-  </p>
-
-  <p>
-    <label>
-      Message<br />
-      <textarea name="message" rows="4" required></textarea>
-    </label>
-  </p>
-
-  <p>
-    <button
-      type="submit"
-      style="cursor:pointer; padding: 0.9rem 1.2rem; border-radius: 10px; border: 0; font-weight: 700;"
-    >
-      Send enquiry
-    </button>
-  </p>
+  <button type="submit">Send enquiry</button>
 </form>
+
 
   </section>
 
