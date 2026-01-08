@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Thanks">
+  <section style="max-width:900px; margin:0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;">
+    <h1>Thanks — enquiry received</h1>
+    <p>I’ll get back to you as soon as I can.</p>
+    <p><a href="/" style="text-decoration: underline;">Back to home</a></p>
+  </section>
+</Layout>
