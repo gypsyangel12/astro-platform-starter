@@ -1,62 +1,118 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-import { cacheHeaders, randomInt } from '../utils';
-
-export const prerender = false;
-
-const tags = ['/revalidation', 'cats-related', 'all-pets-related'];
-const headers = cacheHeaders(365, tags);
-
-Object.entries(headers).map(([k, v]) => {
-    Astro.response.headers.set(k, v);
-});
-
-const explainer = `
-This is a server-rendered page, last created at \`${new Date().toUTCString()}\` with a few extra response headers:
-
-~~~js
-${JSON.stringify(headers, null, 2)}
-~~~
-
-Meaning: **for browsers,** this is a non-cacheable page. At the **CDN level,** it *is* cacheable for up to a year (and Netlify also automatically busts the cache on new deployments, by default).
-
-But there's something more: the \`Cache-Tag\` header, in tandem with the [purge API](https://docs.netlify.com/platform/caching/#on-demand-invalidation), allows a developer to invalidate at will any
-pieces of content (pages, JSON responses, or whatnot) based on the tags associated with them. Tags are completely up to you to decide on, and allow for very powerful patterns.
-
-In real-world applications, you may want to use [stale-while-revalidate](https://docs.netlify.com/platform/caching/#stale-while-revalidate-directive) as well, so that end-users don't experience 
-a performance hit as pages are being rebuilt.
-
-Use the button below to invlidate a random tag out of this page's tags, then refresh the page.
-`;
-
-const exampleTag = tags[randomInt(0, tags.length - 1)];
 ---
 
-<Layout title="Revalidation">
-    <h1 class="mb-10">Revalidating Server Content</h1>
-    <Markdown content={explainer} class="mb-10" />
-    <div class="flex flex-wrap gap-4">
-        <button class="revalidate-button btn" data-tag={exampleTag}>Invalidate tag: {exampleTag}</button>
-        <button class="btn" onclick="location.reload()">Reload page</button>
-    </div>
+<Layout title="Enquire - Bay of Islands Holiday Home Support">
+  <main class="max-w-6xl mx-auto px-4 py-12" style="line-height: 1.6;">
+    <!-- HERO / INTRO SECTION (same style as index) -->
+    <section
+      id="home"
+      style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
+    >
+      <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.75rem;">
+        Reliable Holiday Home Support<br />
+        in the Bay of Islands
+      </h1>
+
+      <p style="font-size: 1.25rem; margin-top: 1.2rem; max-width: 720px;">
+        If you’d like more information or want to discuss support for your holiday home,
+        you’re welcome to get in touch using the form below.
+      </p>
+    </section>
+
+    <!-- ENQUIRE FORM (same as index page form) -->
+    <section
+      id="enquire"
+      style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
+    >
+      <h2>Enquire</h2>
+
+      <p style="max-width: 720px;">
+        Share a few details about your property and what you’re looking for, and I’ll get back to you
+        with more information.
+      </p>
+
+      <form
+        name="holiday-home-enquiry"
+        method="POST"
+        action="/thanks"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        style="max-width: 720px;"
+      >
+        <input type="hidden" name="form-name" value="holiday-home-enquiry" />
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <style>
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.65rem;
+            margin-top: 0.35rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background: #fdfdfd;
+            color: #111;
+            font-size: 1rem;
+          }
+
+          input:focus,
+          textarea:focus {
+            outline: none;
+            border-color: #4f7cff;
+            box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.25);
+            background: #ffffff;
+          }
+
+          label {
+            display: block;
+            margin-bottom: 1.25rem;
+          }
+
+          button {
+            cursor: pointer;
+            padding: 0.9rem 1.4rem;
+            border-radius: 10px;
+            border: 0;
+            font-weight: 700;
+            background: #4f7cff;
+            color: #ffffff;
+            font-size: 1rem;
+          }
+
+          button:hover {
+            background: #3f69e6;
+          }
+        </style>
+
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Property location
+          <input type="text" name="location" />
+        </label>
+
+        <label>
+          Brief message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+
+        <p style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 1.5rem;">
+          Your details are only used to respond to your enquiry.
+        </p>
+
+        <button type="submit">Send enquiry</button>
+      </form>
+    </section>
+  </main>
 </Layout>
-
-<script>
-    function revalidate(tag: string) {
-        fetch('/api/revalidate', {
-            method: 'POST',
-            body: JSON.stringify({ tags: [tag] }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        alert(`Invalidated tag: ${tag}`);
-    }
-
-    const revalidateButton = document.querySelectorAll('button.revalidate-button')[0];
-    revalidateButton.addEventListener('click', (e) => {
-        const tag = (e.target as HTMLButtonElement).getAttribute('data-tag');
-        revalidate(tag);
-    });
-</script>
