@@ -6,12 +6,17 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Bay of Islands Holiday Home Support">
 
+<div style="line-height: 1.6;">
+
+
   <!-- HERO -->
-  <section style="max-width: 900px; margin: 0 auto; padding: 3.5rem 1rem;">
-    <h1>
-      Reliable Holiday Home Support<br />
-      in the Bay of Islands
-    </h1>
+  <section style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;
+">
+    <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.75rem;">
+  Reliable Holiday Home Support<br />
+  in the Bay of Islands
+</h1>
+
 
     <p style="font-size: 1.25rem; margin-top: 1.2rem; max-width: 720px;">
       I provide local oversight, changeover checks, and practical on-the-ground support
@@ -22,10 +27,22 @@ import Layout from '../layouts/Layout.astro';
       This is not full property management — it’s a calm, reliable layer of support
       that helps prevent small issues becoming expensive or stressful ones.
     </p>
+
+<p style="margin-top: 1rem; max-width: 720px;">
+  This is not full property management — it’s a calm, reliable layer of support
+  that helps prevent small issues becoming expensive or stressful ones.
+</p>
+
+<p style="margin-top: 1rem; max-width: 720px; font-weight: 600;">
+  Currently accepting <span style="white-space: nowrap;">2–3</span> new properties.
+</p>
+
+
   </section>
 
   <!-- WHO IT’S FOR -->
-  <section style="background:#f7f7f7; padding: 3rem 1rem;">
+  <section style="background:#f7f7f7; padding: clamp(2rem, 4vw, 3.5rem) 1rem;
+">
     <div style="max-width: 900px; margin: 0 auto;">
       <h2>Who this is for</h2>
 
@@ -44,7 +61,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- SERVICES -->
-  <section style="max-width: 900px; margin: 0 auto; padding: 3rem 1rem;">
+  <section style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;
+">
     <h2>Services</h2>
 
     <p style="max-width: 720px;">
@@ -76,7 +94,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- TRUST -->
-  <section style="background:#f7f7f7; padding: 3rem 1rem;">
+  <section style="background:#f7f7f7; padding: clamp(2rem, 4vw, 3.5rem) 1rem;
+">
     <div style="max-width: 900px; margin: 0 auto;">
       <h2>How I work</h2>
 
@@ -95,7 +114,8 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ENQUIRY -->
-  <section style="max-width: 900px; margin: 0 auto; padding: 3rem 1rem;">
+  <section style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;
+">
     <h2>Enquire</h2>
 
     <p style="max-width: 720px;">
@@ -147,5 +167,29 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </form>
   </section>
+
+<footer style="background:#111; color:#fff; margin-top: 2rem;">
+  <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+    <h2 style="margin-top: 0; font-size: 1.25rem;">Contact</h2>
+
+    <p style="margin: 0.5rem 0;">
+      Bay of Islands • Kerikeri • Paihia • Opua • Russell (by arrangement)
+    </p>
+
+    <p style="margin: 0.5rem 0;">
+      Email: <a href="mailto:YOUR@email.com" style="color:#fff; text-decoration: underline;">YOUR@email.com</a>
+      <br />
+      Phone: <a href="tel:+64211394760" style="color:#fff; text-decoration: underline;">+64 21 139 4760</a>
+    </p>
+
+    <p style="margin: 1rem 0 0; opacity: 0.85; font-size: 0.95rem;">
+      Reliable local support for absentee holiday home owners. Limited client numbers.
+    </p>
+  </div>
+</footer>
+
+
+</div>
+
 
 </Layout>
