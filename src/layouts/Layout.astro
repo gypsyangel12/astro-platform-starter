@@ -21,6 +21,27 @@ const { title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+
+<style is:global>
+  /* Default: white text on the darker template background */
+  body {
+    color: #ffffff;
+  }
+
+  /* Light blocks: readable dark text on light background */
+  .light-section {
+    background: #f7f7f7;
+    color: #1a1a1a;
+  }
+
+  .light-section h1,
+  .light-section h2,
+  .light-section h3 {
+    color: #111;
+  }
+</style>
+
+
     </head>
     <body class="antialiased text-white bg-complementary">
         <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
