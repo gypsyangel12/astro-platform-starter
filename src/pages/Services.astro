@@ -1,19 +1,14 @@
 ---
 import Header from '../components/Header.astro';
+// If your home page uses a Layout component, import it too, e.g.:
+// import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - Bay of Islands Holiday Home Support</title>
-  <!-- Add any CSS or Tailwind links if needed; assuming global styles from Astro -->
-</head>
-<body class="bg-gray-50 text-gray-800">
+<!-- If you have a Layout component, wrap everything in it instead of using raw <main> -->
+<!-- <Layout title="Our Services - Bay of Islands Holiday Home Support"> -->
   <Header />
 
-  <main class="max-w-6xl mx-auto px-4 py-12">
+  <main class="max-w-6xl mx-auto px-4 py-12 bg-gray-50 text-gray-800">
     <!-- Intro Section -->
     <section class="text-center mb-16">
       <h1 class="text-4xl font-bold mb-4">Our Services</h1>
@@ -81,7 +76,9 @@ import Header from '../components/Header.astro';
         <!-- Website & VikBooking Add-On -->
         <div class="bg-white p-6 rounded-lg shadow-md">
           <h3 class="text-2xl font-semibold mb-4">Custom Website with VikBooking Integration</h3>
-          <p class="text-xl font-bold mb-4">One-Off Fee: $1,500–$2,500 (depending on complexity) + Optional $50/month Maintenance</p>
+          <p class="text-xl font-bold mb-4">
+            One-Off Fee: $1,500–$2,500 (depending on complexity) + Optional $50/month Maintenance
+          </p>
           <p class="mb-4">
             We'll build a professional WordPress website for your holiday home, complete with VikBooking – a powerful booking engine that handles direct reservations from your site. It integrates seamlessly with Vik Channel Manager to sync availability, rates, and bookings across major channels like Airbnb, Booking.com, Expedia, and more.
           </p>
@@ -112,10 +109,15 @@ import Header from '../components/Header.astro';
     <section class="text-center bg-blue-100 p-8 rounded-lg">
       <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
       <p class="text-lg mb-6">Contact us for a free property assessment and personalized quote.</p>
-      <a href="#enquire" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Enquire Now</a>
+      <a href="#enquire" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+        Enquire Now
+      </a>
     </section>
   </main>
+<!-- </Layout> -->
+Key points:
 
-  <!-- Footer if needed; assuming it's in a component or global -->
-</body>
-</html>
+Imports (import Header ...) go inside the --- block at the top. [Astro on Netlify]
+Don’t include <!doctype html>, <html>, <head>, <body> in a page if your project already has a layout handling that; follow the same pattern as index.astro.
+Keep Tailwind classes as-is; the Astro Platform Starter already wires Tailwind globally. [Astro Platform Starter]
+If you paste your src/pages/index.astro, I can align this exactly (for example, wrapping in the same Layout component and setting the page <title> the same way your home page does).
