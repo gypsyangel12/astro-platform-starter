@@ -2,17 +2,90 @@
 import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
 <Layout title="Welcome to Astro.">
     <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
+<Layout title="Bay of Islands Holiday Home Support">
+
+  <section style="max-width: 900px; margin: 0 auto; padding: 3rem 1rem;">
+    <h1>Holiday Home Support<br />Bay of Islands</h1>
+
+    <p style="font-size: 1.2rem; margin-top: 1rem;">
+      Local oversight, changeover checks, and peace of mind for holiday home owners.
+      <br />
+      Not full property management. Limited client numbers.
+    </p>
+  </section>
+
+  <section style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+    <h2>Services</h2>
+
+    <h3>Essential Oversight</h3>
+    <p>$280 per month · Up to 6 visits</p>
+
+    <h3>Active Hosting Support</h3>
+    <p>$420 per month · Up to 12 visits</p>
+
+    <h3>High-Turnover Care</h3>
+    <p>$650 per month · Up to 20 visits</p>
+
+    <p style="margin-top: 1rem;">
+      Additional visits charged per use. Clear scope. No surprises.
+    </p>
+  </section>
+
+  <section style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+    <h2>Enquire</h2>
+
+    <form
+      name="holiday-home-enquiry"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="holiday-home-enquiry" />
+      <p hidden>
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <p>
+        <label>
+          Name<br />
+          <input type="text" name="name" required />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Email<br />
+          <input type="email" name="email" required />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Property location<br />
+          <input type="text" name="location" />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Message<br />
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+      </p>
+
+      <p>
+        <button type="submit">Send enquiry</button>
+      </p>
+    </form>
+  </section>
+
+</Layout>
+
     <p>
         <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
     </p>
