@@ -1,245 +1,231 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-
 ---
 
 <Layout title="Bay of Islands Holiday Home Support">
+  <div style="line-height: 1.6;">
 
-<div style="line-height: 1.6;">
+    <!-- HERO -->
+    <section
+      id="home"
+      style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
+    >
+      <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.75rem;">
+        Reliable Holiday Home Support<br />
+        in the Bay of Islands
+      </h1>
 
-
-  <!-- HERO -->
-  <section
-    id="home"
-    style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
-  >
-    <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.75rem;">
-      Reliable Holiday Home Support<br />
-      in the Bay of Islands
-    </h1>
-
-    <p style="font-size: 1.25rem; margin-top: 1.2rem; max-width: 720px;">
-      I provide local oversight, changeover checks, and practical on-the-ground support
-      for holiday home owners who can’t always be here themselves.
-    </p>
-
-    <p style="margin-top: 1rem; max-width: 720px;">
-      This is not full property management — it’s a calm, reliable layer of support
-      that helps prevent small issues becoming expensive or stressful ones.
-    </p>
-
-    <p style="margin-top: 1rem; max-width: 720px; font-weight: 600;">
-      Currently accepting <span style="white-space: nowrap;">2–3</span> new properties.
-    </p>
-  </section>
-
-
-  <!-- WHO IT’S FOR -->
-  <section class="light-section" style="padding: clamp(1.75rem, 4vw, 3rem) 1rem;">
-
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2>Who this is for</h2>
-
-      <ul style="margin-top:1rem;">
-        <li>You own a holiday home in the Bay of Islands</li>
-        <li>You live elsewhere or aren’t always nearby</li>
-        <li>You want someone local keeping an eye on things</li>
-        <li>You value clear boundaries, communication, and reliability</li>
-      </ul>
-
-      <p style="margin-top:1rem;">
-        I work with a limited number of properties so I can be consistent, responsive,
-        and familiar with each home.
+      <p style="font-size: 1.25rem; margin-top: 1.2rem; max-width: 720px;">
+        I provide local oversight, changeover checks, and practical on-the-ground support
+        for holiday home owners who can’t always be here themselves.
       </p>
-    </div>
-  </section>
 
-  <!-- SERVICES -->
- <section
-  id="services"
-  style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
->
-
-    <h2>Services</h2>
-
-    <p style="max-width: 720px;">
-      Services are structured as monthly plans with a set number of visits.
-      This keeps things fair, predictable, and avoids over- or under-servicing.
-    </p>
-
-  <div style="margin-top: 2.5rem;">
-  <h3>Essential Oversight</h3>
-  <p>
-    <strong>$280 per month</strong><br />
-    Up to 6 service visits per month for low-use homes.
-  </p>
-</div>
-
-<div style="margin-top: 2.5rem;">
-  <h3>Active Hosting Support</h3>
-  <p>
-    <strong>$420 per month</strong><br />
-    Up to 12 service visits per month for regularly booked properties.
-  </p>
-</div>
-
-<div style="margin-top: 2.5rem;">
-  <h3>High-Turnover Care</h3>
-  <p>
-    <strong>$650 per month</strong><br />
-    Up to 20 service visits per month for busy or premium homes.
-  </p>
-</div>
-
-
-    <p style="margin-top:1rem;">
-      Additional visits are charged per use. Scope is clear and agreed upfront.
-    </p>
-  </section>
-
-  <!-- TRUST -->
-  <section class="light-section" style="padding: clamp(1.75rem, 4vw, 3rem) 1rem;">
-
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2>How I work</h2>
-
-      <ul>
-        <li>Scheduled service days — no constant interruptions</li>
-        <li>Clear communication and photo reporting</li>
-        <li>Issues flagged early, not after guests arrive</li>
-        <li>Professional boundaries (no scope creep)</li>
-      </ul>
-
-      <p style="margin-top:1rem;">
-        My role is to support your property — not to replace cleaners, trades,
-        or full management services.
+      <p style="margin-top: 1rem; max-width: 720px;">
+        This is not full property management — it’s a calm, reliable layer of support
+        that helps prevent small issues becoming expensive or stressful ones.
       </p>
-    </div>
-  </section>
 
-  <!-- ENQUIRY -->
-<section
-  id="enquire"
-  style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
->
+      <p style="margin-top: 1rem; max-width: 720px; font-weight: 600;">
+        Currently accepting <span style="white-space: nowrap;">2–3</span> new properties.
+      </p>
+    </section>
 
-    <h2>Enquire</h2>
+    <!-- WHO IT’S FOR -->
+    <section style="background:#f7f7f7; color:#111; padding: clamp(1.75rem, 4vw, 3rem) 1rem;">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2>Who this is for</h2>
 
-    <p style="max-width: 720px;">
-      If you’re looking for a local, reliable point of contact for your holiday home,
-      you’re welcome to get in touch below.
-    </p>
+        <ul style="margin-top: 1rem;">
+          <li>You own a holiday home in the Bay of Islands</li>
+          <li>You live elsewhere or aren’t always nearby</li>
+          <li>You want someone local keeping an eye on things</li>
+          <li>You value clear boundaries, communication, and reliability</li>
+        </ul>
 
-  <form
-  name="holiday-home-enquiry"
-  method="POST"
-  action="/thanks"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  style="max-width: 720px;"
->
-  <!-- Required for Netlify -->
-  <input type="hidden" name="form-name" value="holiday-home-enquiry" />
-  <p hidden>
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+        <p style="margin-top: 1rem;">
+          I work with a limited number of properties so I can be consistent, responsive,
+          and familiar with each home.
+        </p>
+      </div>
+    </section>
 
-  <!-- Field styles -->
-  <style>
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.65rem;
-      margin-top: 0.35rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      background: #fdfdfd;
-      color: #111;
-      font-size: 1rem;
-    }
+    <!-- SERVICES -->
+    <section
+      id="services"
+      style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
+    >
+      <h2>Services</h2>
 
-    input:focus,
-    textarea:focus {
-      outline: none;
-      border-color: #4f7cff;
-      box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.25);
-      background: #ffffff;
-    }
+      <p style="max-width: 720px;">
+        Services are structured as monthly plans with a set number of visits.
+        This keeps things fair, predictable, and avoids over- or under-servicing.
+      </p>
 
-    label {
-      display: block;
-      margin-bottom: 1.25rem;
-    }
+      <div style="margin-top: 2.5rem;">
+        <h3>Essential Oversight</h3>
+        <p>
+          <strong>$280 per month</strong><br />
+          Up to 6 service visits per month for low-use homes.
+        </p>
+      </div>
 
-    button {
-      cursor: pointer;
-      padding: 0.9rem 1.4rem;
-      border-radius: 10px;
-      border: 0;
-      font-weight: 700;
-      background: #4f7cff;
-      color: #ffffff;
-      font-size: 1rem;
-    }
+      <div style="margin-top: 2.5rem;">
+        <h3>Active Hosting Support</h3>
+        <p>
+          <strong>$420 per month</strong><br />
+          Up to 12 service visits per month for regularly booked properties.
+        </p>
+      </div>
 
-    button:hover {
-      background: #3f69e6;
-    }
-  </style>
+      <div style="margin-top: 2.5rem;">
+        <h3>High-Turnover Care</h3>
+        <p>
+          <strong>$650 per month</strong><br />
+          Up to 20 service visits per month for busy or premium homes.
+        </p>
+      </div>
 
-  <label>
-    Name
-    <input type="text" name="name" required />
-  </label>
+      <p style="margin-top: 1rem;">
+        Additional visits are charged per use. Scope is clear and agreed upfront.
+      </p>
+    </section>
 
-  <label>
-    Email
-    <input type="email" name="email" required />
-  </label>
+    <!-- TRUST -->
+    <section style="background:#f7f7f7; color:#111; padding: clamp(1.75rem, 4vw, 3rem) 1rem;">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2>How I work</h2>
 
-  <label>
-    Property location
-    <input type="text" name="location" />
-  </label>
+        <ul style="margin-top: 1rem;">
+          <li>Scheduled service days — no constant interruptions</li>
+          <li>Clear communication and photo reporting</li>
+          <li>Issues flagged early, not after guests arrive</li>
+          <li>Professional boundaries (no scope creep)</li>
+        </ul>
 
-  <label>
-    Brief message
-    <textarea name="message" rows="4" required></textarea>
-  </label>
+        <p style="margin-top: 1rem;">
+          My role is to support your property — not to replace cleaners, trades,
+          or full management services.
+        </p>
+      </div>
+    </section>
 
-  <p style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 1.5rem;">
-    Your details are only used to respond to your enquiry.
-  </p>
+    <!-- ENQUIRE -->
+    <section
+      id="enquire"
+      style="max-width: 900px; margin: 0 auto; padding: clamp(2rem, 4vw, 3.5rem) 1rem;"
+    >
+      <h2>Enquire</h2>
 
-  <button type="submit">Send enquiry</button>
-</form>
+      <p style="max-width: 720px;">
+        If you’re looking for a local, reliable point of contact for your holiday home,
+        you’re welcome to get in touch below.
+      </p>
 
+      <form
+        name="holiday-home-enquiry"
+        method="POST"
+        action="/thanks"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        style="max-width: 720px;"
+      >
+        <input type="hidden" name="form-name" value="holiday-home-enquiry" />
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
 
-  </section>
+        <style>
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.65rem;
+            margin-top: 0.35rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background: #fdfdfd;
+            color: #111;
+            font-size: 1rem;
+          }
 
-<footer style="background:#111; color:#fff; margin-top: 2rem;">
-  <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
-    <h2 style="margin-top: 0; font-size: 1.25rem;">Contact</h2>
+          input:focus,
+          textarea:focus {
+            outline: none;
+            border-color: #4f7cff;
+            box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.25);
+            background: #ffffff;
+          }
 
-    <p style="margin: 0.5rem 0;">
-      Bay of Islands • Kerikeri • Paihia • Opua • Russell (by arrangement)
-    </p>
+          label {
+            display: block;
+            margin-bottom: 1.25rem;
+          }
 
-    <p style="margin: 0.5rem 0;">
-      Email: <a href="mailto:boiholidayh@gmail.com" style="color:#fff; text-decoration: underline;">boiholidayh@gmail.com</a>
-      <br />
-      Phone: <a href="tel:+64211394760" style="color:#fff; text-decoration: underline;">+64 21 139 4760</a>
-    </p>
+          button {
+            cursor: pointer;
+            padding: 0.9rem 1.4rem;
+            border-radius: 10px;
+            border: 0;
+            font-weight: 700;
+            background: #4f7cff;
+            color: #ffffff;
+            font-size: 1rem;
+          }
 
-    <p style="margin: 1rem 0 0; opacity: 0.85; font-size: 0.95rem;">
-      Reliable local support for absentee holiday home owners. Limited client numbers.
-    </p>
+          button:hover {
+            background: #3f69e6;
+          }
+        </style>
+
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Property location
+          <input type="text" name="location" />
+        </label>
+
+        <label>
+          Brief message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+
+        <p style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 1.5rem;">
+          Your details are only used to respond to your enquiry.
+        </p>
+
+        <button type="submit">Send enquiry</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background:#111; color:#fff; margin-top: 2rem;">
+      <div style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+        <h2 style="margin-top: 0; font-size: 1.25rem;">Contact</h2>
+
+        <p style="margin: 0.5rem 0;">
+          Bay of Islands • Kerikeri • Paihia • Opua • Russell (by arrangement)
+        </p>
+
+        <p style="margin: 0.5rem 0;">
+          Email:
+          <a href="mailto:boiholidayh@gmail.com" style="color:#fff; text-decoration: underline;">boiholidayh@gmail.com</a>
+          <br />
+          Phone:
+          <a href="tel:+64211394760" style="color:#fff; text-decoration: underline;">+64 21 139 4760</a>
+        </p>
+
+        <p style="margin: 1rem 0 0; opacity: 0.85; font-size: 0.95rem;">
+          Reliable local support for absentee holiday home owners. Limited client numbers.
+        </p>
+      </div>
+    </footer>
+
   </div>
-</footer>
-
-
-</div>
-
-
 </Layout>
