@@ -126,49 +126,56 @@ import Layout from '../layouts/Layout.astro';
       you’re welcome to get in touch below.
     </p>
 
-    <form
-      name="holiday-home-enquiry"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
+   <form
+  name="holiday-home-enquiry"
+  method="POST"
+  action="/thanks/"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="holiday-home-enquiry" />
+  <p hidden>
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+
+  <p>
+    <label>
+      Name<br />
+      <input type="text" name="name" required />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Email<br />
+      <input type="email" name="email" required />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Property location<br />
+      <input type="text" name="location" />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Message<br />
+      <textarea name="message" rows="4" required></textarea>
+    </label>
+  </p>
+
+  <p>
+    <button
+      type="submit"
+      style="cursor:pointer; padding: 0.9rem 1.2rem; border-radius: 10px; border: 0; font-weight: 700;"
     >
-      <input type="hidden" name="form-name" value="holiday-home-enquiry" />
-      <p hidden>
-        <label>Don’t fill this out: <input name="bot-field" /></label>
-      </p>
+      Send enquiry
+    </button>
+  </p>
+</form>
 
-      <p>
-        <label>
-          Name<br />
-          <input type="text" name="name" required />
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Email<br />
-          <input type="email" name="email" required />
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Property location<br />
-          <input type="text" name="location" />
-        </label>
-      </p>
-
-      <p>
-        <label>
-          Brief message<br />
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-      </p>
-
-      <p>
-        <button type="submit">Send enquiry</button>
-      </p>
-    </form>
   </section>
 
 <footer style="background:#111; color:#fff; margin-top: 2rem;">
